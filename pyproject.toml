@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wordfreqx"
+version = "0.1.0"
+description = "CLI to count and rank words across text files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "duongynhi000005-oss"}]
+keywords = ["cli", "text", "words", "frequency", "analysis"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Utilities",
+]
+
+[project.scripts]
+wordfreqx = "wordfreqx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/duongynhi000005-oss/wordfreqx"
+Repository = "https://github.com/duongynhi000005-oss/wordfreqx"
+Issues = "https://github.com/duongynhi000005-oss/wordfreqx/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wordfreqx"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

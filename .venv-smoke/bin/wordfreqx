@@ -1,0 +1,6 @@
+#!/root/codex-jobs/agent4-work/wordfreqx/.venv-smoke/bin/python
+import sys
+from wordfreqx.cli import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
